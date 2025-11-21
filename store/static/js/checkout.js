@@ -26,7 +26,7 @@ $(document).ready(function () {
                         "key": "rzp_test_bvs9fcMzpUjePo",  // Replace with your Razorpay key
                         "amount": response.total_price * 100,
                         "currency": "INR",
-                        "name": "Amritha_Madampully",
+                        "name": "Priyanka",
                         "description": "Thank you for buying from us",
                         "image": "https://example.com/your_logo", // Replace with your logo URL
                         "handler": function (responseb) {
