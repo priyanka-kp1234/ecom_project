@@ -2,7 +2,9 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from store.models import Product,Cart,Wishlist
 from django.http.response import JsonResponse
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='loginpage')
 def index(request):
     wishlist = Wishlist.objects.filter(user=request.user)
     context = {"wishlist":wishlist}
