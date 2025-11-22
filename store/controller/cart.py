@@ -2,7 +2,9 @@ from django.shortcuts import render,redirect
 from store . models import *
 from django.contrib import messages
 from django.http.response import JsonResponse
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='loginpage')
 def addtocart(request):
     if request.method == "POST":
         if request.user.is_authenticated:
